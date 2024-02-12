@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button onclick="test()"> Click </button>
+
+
+    <script>
+         
+         function test(){
+            if ("geolocation" in navigator) {
+  navigator.geolocation.getCurrentPosition(function(position) {
+    var latitude = position.coords.latitude;
+    var longitude = position.coords.longitude;
+    console.log("Latitude:", latitude, "Longitude:", longitude);
+    // You can do something with the latitude and longitude here
+  }, function(error) {
+    console.error("Error getting geolocation:", error);
+  });
+} else {
+  console.error("Geolocation is not supported by this browser.");
+}
+
+         }
+
+
+    </script>
+
+</body>
+</html>
