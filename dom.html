@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CRUD Operations in DOM</title>
+</head>
+<body>
+<h2>Items List</h2>
+<ul id="itemsList">
+    <!-- List items will be added here dynamically -->
+</ul>
+<button onclick="createItem()">Add Item</button>
+<script>
+// CRUD Operations
+
+// Create
+function createItem() {
+    const list = document.getElementById('itemsList');
+    const newItem = document.createElement('li');
+    newItem.textContent = 'New Item ' + (list.children.length + 1);
+    newItem.onclick = function() { updateItem(this); };
+    list.appendChild(newItem);
+}
+
+// Read
+// Simply viewing the list in the browser is considered 'reading'.
+// The items are already being displayed as part of the list's innerHTML.
+
+// Update
+function updateItem(item) {
+    const newText = prompt('Update the item text', item.textContent);
+    if (newText) {
+        item.textContent = newText;
+    }
+}
+
+// Delete (Extra function to demonstrate deletion)
+function deleteItem(item) {
+    // Assuming each item has an 'onclick' event to call this function
+    item.parentNode.removeChild(item);
+}
+
+</script>
+</body>
+</html>
