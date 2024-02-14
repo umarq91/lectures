@@ -15,13 +15,15 @@ const quotes = [
   ];
   
 
+
 function randomQuote() {
-    document.body.style.background="black"
-    document.body.style.color="white"
-  let randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
-  heading.innerText = "Quote =>    " +   randomQuote.quote;
-  author.innerText = "Writer =>    " + randomQuote.author;
-  
+
+    document.body.style.background = "black";
+    document.body.style.color = "white";
+    let randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+    heading.innerText = "Quote =>    " + randomQuote.quote;
+    author.innerText = "Writer =>    " + randomQuote.author;
+    
 }
 
 btn.addEventListener('click',randomQuote)
