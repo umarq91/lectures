@@ -1,0 +1,35 @@
+All Important Topics of DOM ( Not Fully completed)
+
+-- Accessing an Element
+             - getElementsById
+             - querySelector
+             - querySelectorAll 
+             
+-- All About Text
+            - innerText
+            - textContent
+            - InnerHtml
+
+-- Classes
+    - ClassList
+            -Add , Remove, contains , toggle , contains
+
+- attibutes 
+            - attributes
+            - setAtrribute
+            - hasAttribute
+            - removeAttribute
+
+-- Dom Siblings
+        /to be continued
+
+
+-- Styles 
+        
+
+
+-- Creating and Appending Child / removing Elements
+
+
+-- Events ( Mouse + some Keyboard Events)
+
