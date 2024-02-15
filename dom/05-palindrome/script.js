@@ -9,15 +9,14 @@ let value = input.value;
 // text should not be empty and if shouldnt be a number
 if(value==='') return ; 
 
+// A butt tuba = > a butt tuba => [a, ,b,....] => reversed => join()
+const reverse = value.toLowerCase().split('').reverse().join('').split(' ').join('')
+console.log(reverse);
 
-const reverse = value.toLowerCase().split('').reverse().join('')
+let spaceRemovedFromOriginal  = value.toLowerCase().split(' ').join('') // to avoid spaces diffference
+console.log(spaceRemovedFromOriginal);
 
-let result =  reverse.toLowerCase().split(' ').join('')
-
-let spaceRemovedFromOriginal  =  value.toLowerCase().split(' ').join('') // to avoid spaces diffference
- 
-
-if(result===spaceRemovedFromOriginal){
+if(reverse===spaceRemovedFromOriginal){
     console.log(true);
     h1.innerText=`Yes " ${value} " is Palindrome`
 }else{
