@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+}
+#modal {
+    display: none; /* Hide the modal by default */
+}
+.modal {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: rgba(0,0,0,0.9);
+}
+.content {
+    width: 70%;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    background-color: gainsboro;
+}
