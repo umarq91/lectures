@@ -1,0 +1,21 @@
+body{
+    background-color: rgb(104, 104, 104);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container{
+    width: 80%;
+    height: 50%;
+    border: 2px solid yellow;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    font-size: 120px;
+    color: blue;
+}

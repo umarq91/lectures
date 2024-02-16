@@ -9,7 +9,6 @@ let value = input.value;
 // text should not be empty and if shouldnt be a number
 if(value==='') return ; 
 
-// A butt tuba = > a butt tuba => [a, ,b,....] => reversed => join()
 const reverse = value.toLowerCase().split('').reverse().join('').split(' ').join('')
 console.log(reverse);
 
