@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<button> Get a New </button>
+
+<div> </div>
+
+<script>
+
+
+const btn = document.querySelector("button")
+const body = document.querySelector("div")
+
+    function getDog() {
+
+        fetch("https://dog.ceo/api/breeds/image/random")
+            .then((res) => res.json())
+            .then((data) => {
+                body.innerHTML = `<img src=${data.message} width="400" />`
+            })
+            .catch((err)=> console.log("Not Found bro") )
+    }
+
+
+btn.addEventListener("click",getDog)
+
+</script>
+
+
+</body>
+</html>
