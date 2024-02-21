@@ -8,13 +8,15 @@
 <body>
     
 
+    // JSON.parse() , JSON.stringify()
+ 
 
     <script>
         
 fetch('https://dummyjson.com/products/90')
 .then(res => res.json())
-.then(json => {
-    document.body.innerHTML = `<img src=${json.images[0]} width="400" />`
+.then(data => {
+    document.body.innerHTML = `<img src=${data.images[0]} width="400" />`
 })
     </script>
 </body>
