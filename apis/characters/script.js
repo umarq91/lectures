@@ -1,5 +1,6 @@
 let container = document.getElementById("container")
 let btn = document.getElementById("btn")
+let input = document.querySelector("input")
 const base_url= "https://www.superheroapi.com/api.php/2145484058984269"
 
 function getSuperHero(id){
@@ -12,20 +13,39 @@ return;
 })
 }
 
+
+
+
+function getSuperHeroBySearch(name){
+    fetch(`${base_url}/search/${name}`)
+    .then((res)=>res.json())
+    .then((data)=>{
+        console.log(data.results);
+   displayData(data.results)
+    return;
+    })
+    }
+
+
+
 btn.addEventListener("click",()=>{
 
-console.log("called");
-const random=  Math.floor(Math.random()*372)
-console.log(random);
-getSuperHero(random)
+console.log(input.value);
+getSuperHeroBySearch(input.value)
 
 })
 
+
+
+// img
+
 function displayData(data) {
-    console.log(data);
-    // let img = document.createElement("img");    
-    // img.src = data.image.url;
-    // img.width="400"
-    // container.appendChild(img);
-    container.innerHTML += `<img src="${data.image.url}" width='400px' />`
+
+    if(!data){
+        container.innerHTML = `<h1 class="text-6xl text-red-800 font-bold"> No DATA FOUND </h1>`
+        return;
+    }
+   
+        container.innerHTML = `<img src="${data[0].image.url}" width='400px' />`
+
 }
