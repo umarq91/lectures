@@ -20,6 +20,7 @@ function displayData(data){
 
 function getSuperHero(){
   let rndm=   Math.floor(Math.random()*700)
+
 fetch('https://www.superheroapi.com/api.php/2145484058984269/'+rndm)
 .then(response => response.json())
 .then(data =>{
@@ -51,6 +52,25 @@ data.results.map((hero)=>{
    })
 }
 
-randomButton.addEventListener("click",getSuperHero)
+
+
+
+const GetSuperHeroV2 = async ()=>{
+
+        let rndm=   Math.floor(Math.random()*700)
+try {
+    let response =  await fetch('https://www.superheroapi.com/api.php/2145484058984269/'+rndm)
+    let data = await  response.json()
+    displayData(data)
+} catch (error) {
+    console.log(error);
+}
+ 
+     
+}   
+
+
+
+randomButton.addEventListener("click",GetSuperHeroV2)
 searchButton.addEventListener("click",searchHero)
 
