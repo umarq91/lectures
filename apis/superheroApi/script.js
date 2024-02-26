@@ -3,7 +3,6 @@
 let container = document.getElementById("container")
 let search = document.getElementById("input")
 
-
 let randomButton = document.getElementById("random")
 let searchButton = document.getElementById("search")
 
@@ -55,19 +54,18 @@ data.results.map((hero)=>{
 
 
 
-const GetSuperHeroV2 = async ()=>{
-
-        let rndm=   Math.floor(Math.random()*700)
-try {
-    let response =  await fetch('https://www.superheroapi.com/api.php/2145484058984269/'+rndm)
-    let data = await  response.json()
-    displayData(data)
-} catch (error) {
+const GetSuperHeroV2 = async () => {
+  let rndm = Math.floor(Math.random() * 700);
+  try {
+    let response = await fetch(
+      "https://www.superheroapi.com/api.php/2145484058984269/" + rndm
+    );
+    let data = await response.json();
+    displayData(data);
+  } catch (error) {
     console.log(error);
-}
- 
-     
-}   
+  }
+};   
 
 
 

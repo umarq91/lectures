@@ -1,0 +1,26 @@
+.container{
+    height: 300px;
+    width: 650px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3px;
+}
+.square{
+    border: 1px solid black;
+    width: 200px;
+}
+.mole{
+background-color: black;
+}
+h2{
+    margin-left: 50px;
+}
+
+.complete{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}

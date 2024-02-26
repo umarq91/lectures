@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-pink-700">
+    
+
+
+
+<h1 class="text-4xl font-bold text-center sm:text-5xl md:text-6xl l">Weather App</h1>
+
+    <div class=" bg-green-500 flex justify-between">
+           <div class=" bg-gray-500">1</div>
+           <div class="  bg-gray-800 hidden md:block">2</div>
+           <div class="-2 bg-gray-300 hidden md:block">3</div>
+     
+           
+        
+    </div>
+
+    <script>
+async function fetchSeriesData(seriesId) {
+    const url = `https://moviesdatabase.p.rapidapi.com/titles/series/${seriesId}`;
+    const options = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': '6f1e2ff0b3mshbae9b1db3817843p1fc193jsnd9df49eb4da5'
+        }
+    };
+
+    try {
+        const response = await fetch(url, options);
+        const result = await response.text(); // Use response.json() if the API returns JSON
+        console.log(result);
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+fetchSeriesData('%7BseriesId%7D');
+
+
+    </script>
+</body>
+</html>
