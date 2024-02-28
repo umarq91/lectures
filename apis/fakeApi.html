@@ -12,12 +12,31 @@
  
 
     <script>
+
         
-fetch('https://dummyjson.com/products/90')
-.then(res => res.json())
-.then(data => {
-    document.body.innerHTML = `<img src=${data.images[0]} width="400" />`
+fetch('https://dummyjson.com/products')
+.then(res => res.json()
+)
+
+
+.then(data =>{
+  
+
+    data.products.map((data)=>{
+        document.body.innerHTML +=
+    `
+     <h4>  ${data.brand}</h4> 
+     <h6>  ${data.category}</h6> 
+     <p> ${data.description} </p>
+     <img src="${data.images[0]}" />
+    
+     `
+    })
+   
 })
+
+
+
     </script>
 </body>
 </html>

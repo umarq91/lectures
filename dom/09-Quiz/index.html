@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .options button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            display: block;
+            padding: 10px 20px;
+            width: 60%;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .options button:hover {
+            background-color: #0056b3;
+        }
+        #submit {
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            padding: 10px 30px;
+            margin-top: 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            float: right;
+            
+        }
+        #submit:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+  
+<body>
+    
+    <div class="container">
+
+        <h5 id="questionNo">Quiz Game</h5>
+
+        <h2 id="question">What is Best Programming Langauge? </h2>
+
+        <div class="options">
+        
+        </div>  
+        
+<button id="submit">submit</button>
+    </div>
+
+    <script src="script.js">
+
+    </script>
+</body>
+</html>
